@@ -1,0 +1,30 @@
+@import "reset";
+@import "base";
+@import "mixins";
+
+$some-color-var: #0dcfff;
+
+body {
+  @include flex-container(center, center, column);
+  background-color: papayawhip;
+
+  .header {
+    margin-bottom: 30px;
+    margin-top: -100px;
+    cursor: pointer;
+    color: lighten(indigo, 10%);
+    text-shadow: 0px 0px 5px deeppink;
+  }
+
+  .wrapper {
+    border: skyblue 1px solid;
+
+    &:hover {
+      transform: rotateX(-10deg);
+    }
+
+    .box {
+      border: orange 1px dashed;
+    }
+  }
+}
